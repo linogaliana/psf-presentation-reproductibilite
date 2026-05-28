@@ -12,9 +12,8 @@
 <script src="index_files/libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.38">
 
-  <meta name="author" content="Romain Avouac">
   <meta name="author" content="Lino Galiana">
-  <title>La reproductibilité au service de la recherche et de la mise en production de projets statistiques</title>
+  <title>Enjeux et méthodes de la reproductibilité scientifique</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -154,28 +153,20 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="_extensions/InseeFrLab/jms/cover.png" data-background-opacity="0.6" data-background-size="cover" class="quarto-title-block center">
-  <h1 class="title">La reproductibilité au service de la recherche et de la mise en production de projets statistiques</h1>
+  <h1 class="title">Enjeux et méthodes de la reproductibilité scientifique</h1>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Romain Avouac 
-</div>
-        <p class="quarto-title-affiliation">
-            Insee, Direction des statistiques démographiques et sociales
-          </p>
-    </div>
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
 Lino Galiana <a href="https://orcid.org/0000-0001-8663-5100" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
 </div>
         <p class="quarto-title-affiliation">
-            Insee, Direction des statistiques démographiques et sociales
+            Insee
           </p>
     </div>
 </div>
 
-  <p class="date">26 novembre 2025</p>
+  <p class="date">29 mai 2026</p>
 </section>
 <section id="contexte" class="slide level2 smaller" data-background-image="header_jms2025.png" data-background-opacity="0.1" data-background-size="contain" data-background-position="top center" data-background-repeat="no-repeat">
 <h2>Contexte</h2>
@@ -192,6 +183,7 @@ Lino Galiana <a href="https://orcid.org/0000-0001-8663-5100" class="quarto-title
 <ul>
 <li>Acculturation et incitations limités aux enjeux de reproductibilité ;</li>
 <li>Auditabilité limitée avec des données non partageables ;</li>
+<li>Complexification des projets avec un accès aux données par le biais de multiples fournisseurs ou infrastructures ;</li>
 <li>Recours à des logiciels propriétaires difficiles à auditer…</li>
 </ul></li>
 </ul>
@@ -264,6 +256,30 @@ Lino Galiana <a href="https://orcid.org/0000-0001-8663-5100" class="quarto-title
 <section id="partage-et-transparence-du-code" class="slide level2 smaller" data-background-image="header_jms2025.png" data-background-opacity="0.1" data-background-size="contain" data-background-position="top center" data-background-repeat="no-repeat">
 <h2>Partage et transparence du code</h2>
 <h3>
+Niveau 0: versionner et partager son code
+</h3>
+<ul>
+<li><code>Git</code> <i class="fa-brands fa-git-alt" aria-label="git-alt"></i>, la première des bonnes pratiques:
+<ul>
+<li>Fiabilise l’évolution d’un projet avec du code</li>
+<li>Oblige à se poser la question des bonnes pratiques</li>
+<li>Permet de gérer la temporalité complexe d’un projet de recherche (tests, retours en arrière, etc.)</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><code>Github</code> <i class="fa-brands fa-github" aria-label="github"></i> et l’<em>open source</em>, une démarche de transparence scientifique:
+<ul>
+<li>Partager son code de manière proactive en améliore la qualité</li>
+<li>Possibilité de recevoir des feedbacks améliore la qualité</li>
+<li>Galerie pour valoriser un projet</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="partage-et-transparence-du-code-1" class="slide level2 smaller" data-background-image="header_jms2025.png" data-background-opacity="0.1" data-background-size="contain" data-background-position="top center" data-background-repeat="no-repeat">
+<h2>Partage et transparence du code</h2>
+<h3>
 Premier niveau: lisibilité du code
 </h3>
 <blockquote>
@@ -290,12 +306,12 @@ Premier niveau: lisibilité du code
 </ul>
 </div>
 </section>
-<section id="partage-et-transparence-du-code-1" class="slide level2 smaller" data-background-image="header_jms2025.png" data-background-opacity="0.1" data-background-size="contain" data-background-position="top center" data-background-repeat="no-repeat">
+<section id="partage-et-transparence-du-code-2" class="slide level2 smaller" data-background-image="header_jms2025.png" data-background-opacity="0.1" data-background-size="contain" data-background-position="top center" data-background-repeat="no-repeat">
 <h2>Partage et transparence du code</h2>
 <h3>
 Deuxième niveau: lisibilité de la structure
 </h3>
-<p>Plus de détails dans le cours de mise en production de l’ENSAE <span class="citation" data-cites="mise_en_prod">(<a href="#/références" role="doc-biblioref" onclick="">Avouac et Galiana 2025</a>)</span></p>
+<p>Plus de détails dans un cours de mise en production de l’ENSAE <span class="citation" data-cites="mise_en_prod">(<a href="#/références" role="doc-biblioref" onclick="">Avouac et Galiana 2025</a>)</span></p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <pre><code>├── report.ipynb
@@ -330,7 +346,7 @@ Deuxième niveau: lisibilité de la structure
         └── correlation.png</code></pre>
 </div></div>
 </section>
-<section id="partage-et-transparence-du-code-2" class="slide level2 smaller" data-background-image="header_jms2025.png" data-background-opacity="0.1" data-background-size="contain" data-background-position="top center" data-background-repeat="no-repeat">
+<section id="partage-et-transparence-du-code-3" class="slide level2 smaller" data-background-image="header_jms2025.png" data-background-opacity="0.1" data-background-size="contain" data-background-position="top center" data-background-repeat="no-repeat">
 <h2>Partage et transparence du code</h2>
 <h3>
 Troisième niveau: d’où vient ce chiffre&nbsp;?
@@ -338,9 +354,7 @@ Troisième niveau: d’où vient ce chiffre&nbsp;?
 <ul>
 <li><code>Git</code> <i class="fa-brands fa-git-alt" aria-label="git-alt"></i>, la première des bonnes pratiques
 <ul>
-<li>Fiabilise le partage et l’évolution du code</li>
-<li>Oblige à se poser la question des bonnes pratiques</li>
-<li>Ne suffit pas lorsqu’on a plus du code dans un projet</li>
+<li><strong>Mais</strong> ne suffit pas lorsqu’on a plus du code dans un projet</li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -366,14 +380,14 @@ Troisième niveau: d’où vient ce chiffre&nbsp;?
 <ul>
 <li>Environnement logiciel, secrets d’authentification, etc.</li>
 <li>Certains sont partageables, d’autres non (ex: jetons d’API 👮)</li>
-<li>(Auto)documenter dans le code (variables d’environnement et <code>dotenv</code> ou <code>.Renviron</code>)</li>
+<li>(Auto)documenter dans le code (variables d’environnement et <code>.env</code> ou <code>.Renviron</code>)</li>
 </ul></li>
 </ul>
 <div class="fragment">
 <ul>
 <li>Solution 1&nbsp;: <span class="orange"><strong>environnements virtuels</strong></span>
 <ul>
-<li>Partager la recette de construction de l’environnement ayant permis de faire tourner le code</li>
+<li>Recette de construction de l’environnement permettant de faire tourner le code</li>
 <li>Solution technique: <code>venv</code> ou <code>uv</code> (<i class="fa-brands fa-python" aria-label="python"></i>), <code>renv</code> en (<i class="fa-brands fa-r-project" aria-label="r-project"></i>)</li>
 </ul></li>
 </ul>
@@ -382,8 +396,8 @@ Troisième niveau: d’où vient ce chiffre&nbsp;?
 <ul>
 <li>Solution 2:&nbsp;la <strong><span class="orange">conteneurisation</span></strong>
 <ul>
-<li>Partager la recette de construction de l’ordinateur ayant permis de faire tourner le code</li>
-<li>Solution technique: <code>Docker</code> <i class="fa-brands fa-docker" aria-label="docker"></i></li>
+<li>Partager la recette de construction de l’ordinateur ayant permis de faire tourner le code (solution technique: <code>Docker</code> <i class="fa-brands fa-docker" aria-label="docker"></i>)</li>
+<li>Plutôt orienté utilisation industrielle mais intéressant pour certains projets de recherche</li>
 </ul></li>
 </ul>
 </div>
@@ -458,7 +472,7 @@ Vilhuber, Lars, et Jack Cavanagh. 2025. <span>«&nbsp;Report of the AEA Data Edi
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="_extensions/InseeFrLab/jms2025/head_jms2025.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><strong><a href="https://journees-methodologie-statistique.insee.net/">15e édition des journées de méthodologie statistique</a></strong></p>
+<p><strong><a href="https://www.umi-source.uvsq.fr/psf-creons-10-jours-de-formations-autour-de-la-science-ouverte-la-reproductibilite-et-les-partenariats-scientifiques-equitables">Journées de la science ouverte PSF CREONS</a></strong></p>
 </div>
 </div></div>
 
