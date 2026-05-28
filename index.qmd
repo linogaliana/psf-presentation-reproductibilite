@@ -1,22 +1,20 @@
 ---
-title: La reproductibilité au service de la recherche et de la mise en production de projets statistiques
-date: 2025-11-26
+title: Enjeux et méthodes de la reproductibilité scientifique
+date: 2026-05-29
 date-format: long
 lang: fr
 author:
-  - name: Romain Avouac
-    affiliations:
-      - name: Insee, Direction des statistiques démographiques et sociales
   - name: Lino Galiana
     orcid: 0000-0001-8663-5100
     affiliations:
-      - name: Insee, Direction des statistiques démographiques et sociales
+      - name: Insee
 slide-number: true
 footer: |
-  **[15e édition des journées de méthodologie statistique](https://journees-methodologie-statistique.insee.net/)**
+  **[Journées de la science ouverte PSF CREONS](https://www.umi-source.uvsq.fr/psf-creons-10-jours-de-formations-autour-de-la-science-ouverte-la-reproductibilite-et-les-partenariats-scientifiques-equitables)**
 format: jms-revealjs
 bibliography: references.bib
 ---
+
 
 
 
@@ -32,6 +30,7 @@ bibliography: references.bib
 * Facteurs multiples:
     + Acculturation et incitations limités aux enjeux de reproductibilité ;
     + Auditabilité limitée avec des données non partageables ;
+    + Complexification des projets avec un accès aux données par le biais de multiples fournisseurs ou infrastructures ;
     + Recours à des logiciels propriétaires difficiles à auditer...
 
 . . .
@@ -86,6 +85,23 @@ Plus de détails récents, dans [AEA Data and code sharing policy](https://www.a
 ![](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/slides/img/environment_clean.png)
 
 
+## Partage et transparence du code {.smaller}
+
+<h3>Niveau 0: versionner et partager son code</h3>
+
+
+* `Git` {{< fa brands git-alt >}}, la première des bonnes pratiques:
+	- Fiabilise l’évolution d'un projet avec du code
+	- Oblige à se poser la question des bonnes pratiques
+  - Permet de gérer la temporalité complexe d'un projet de recherche (tests, retours en arrière, etc.)
+
+. . .
+
+* `Github` {{< fa brands github >}} et l'*open source*, une démarche de transparence scientifique:
+  - Partager son code de manière proactive en améliore la qualité
+  - Possibilité de recevoir des feedbacks améliore la qualité
+  - Galerie pour valoriser un projet
+
 
 ## Partage et transparence du code {.smaller}
 
@@ -112,7 +128,7 @@ Plus de détails récents, dans [AEA Data and code sharing policy](https://www.a
 
 <h3>Deuxième niveau: lisibilité de la structure</h3>
 
-Plus de détails dans le cours de mise en production de l'ENSAE [@mise_en_prod]
+Plus de détails dans un cours de mise en production de l'ENSAE [@mise_en_prod]
 
 :::: {.columns}
 
@@ -163,9 +179,7 @@ Plus de détails dans le cours de mise en production de l'ENSAE [@mise_en_prod]
 <h3>Troisième niveau: d'où vient ce chiffre ?</h3>
 
 * `Git` {{< fa brands git-alt >}}, la première des bonnes pratiques
-	- Fiabilise le partage et l’évolution du code
-	- Oblige à se poser la question des bonnes pratiques
-	- Ne suffit pas lorsqu’on a plus du code dans un projet
+	- **Mais** ne suffit pas lorsqu’on a plus du code dans un projet
 
 . . .
 
@@ -189,19 +203,19 @@ Un projet lisible, structuré et versionné suffit-il à assurer la reproductibi
 - De nombreux [**éléments d’environnement**]{.orange} peuvent faire qu'un code est non réplicable:
   - Environnement logiciel, secrets d'authentification, etc.
   - Certains sont partageables, d'autres non (ex: jetons d'API 👮)
-  - (Auto)documenter dans le code (variables d'environnement et `dotenv` ou `.Renviron`)
+  - (Auto)documenter dans le code (variables d'environnement et `.env` ou `.Renviron`)
 
 . . .
 
 - Solution 1 : [**environnements virtuels**]{.orange}
-	- Partager la recette de construction de l’environnement ayant permis de faire tourner le code
+	- Recette de construction de l'environnement permettant de faire tourner le code
 	- Solution technique: `venv` ou `uv` ({{< fa brands python >}}), `renv` en ({{< fa brands r-project >}})
 
 . . .
 
 - Solution 2: la **[conteneurisation]{.orange}**
-	- Partager la recette de construction de l’ordinateur ayant permis de faire tourner le code
-	- Solution technique: `Docker` {{< fa brands docker >}}
+	- Partager la recette de construction de l’ordinateur ayant permis de faire tourner le code (solution technique: `Docker` {{< fa brands docker >}})
+  - Plutôt orienté utilisation industrielle mais intéressant pour certains projets de recherche
 
 
 ## Conclusion
