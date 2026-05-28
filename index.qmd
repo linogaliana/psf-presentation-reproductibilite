@@ -19,6 +19,7 @@ bibliography: references.bib
 ---
 
 
+
 ## Contexte {.smaller}
 
 * __["Crise de la reproductibilité"]{.orange}__ durable dans la recherche
